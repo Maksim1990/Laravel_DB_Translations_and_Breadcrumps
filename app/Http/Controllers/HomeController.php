@@ -95,4 +95,25 @@ class HomeController extends Controller
     }
 
 
+    /**
+     *
+     * Method for deleting DB label translation
+     *
+     * @param $lang
+     * @return string
+     */
+    public function translateDelete($lang)
+    {
+        App::setLocale($lang);
+
+        $translateItem=LanguageLine::findOrFail(3);
+        $translateItem->delete();
+
+
+
+        return 'Translation is DELETED!';
+    }
+
+
+
 }
