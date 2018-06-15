@@ -3,6 +3,7 @@
 ###### This application is an example of implementation and using following techniques and services
 
 > - Using DB as translation storage by using `laravel-translation-loader` package
+> - Implemented [3assy2018/nationals](https://github.com/3assy2018/nationals) package for making available list of countries and regions in application
 
 
 #### Installation
