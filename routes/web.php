@@ -26,6 +26,7 @@ Route::group(['prefix'=>'{lang}'], function (){
     Route::get('/translate', 'HomeController@translate')->name('translate');
     Route::get('/translate/update', 'HomeController@translateUpdate')->name('translate_update');
     Route::get('/translate/delete', 'HomeController@translateDelete')->name('translate_delete');
+    Route::get('/translate/create', 'HomeController@translateCreate')->name('translate_create');
 
 
 

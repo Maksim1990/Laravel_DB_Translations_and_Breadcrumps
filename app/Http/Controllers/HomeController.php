@@ -25,17 +25,7 @@ class HomeController extends Controller
      */
     public function index($lang)
     {
-        App::setLocale($lang);
-        $languageLine=LanguageLine::create([
-            'group' => 'validation',
-            'key' => 'readonly',
-            'text' => [
-                'en' => 'This is a readonly',
-                'nl' => 'Dit is readonly NL',
-                'fr' => 'This is a readonly FR',
-                'de' => 'This is a readonly DE'
-            ],
-        ]);
+
 //        $t=LanguageLine::findOrFail(1);
 //        //dd($t);
 //        dd($t->text);
@@ -112,6 +102,32 @@ class HomeController extends Controller
 
 
         return 'Translation is DELETED!';
+    }
+
+    /**
+     *
+     * Method for deleting DB label translation
+     *
+     * @param $lang
+     * @return string
+     */
+    public function translateCreate($lang)
+    {
+        App::setLocale($lang);
+        $languageLine=LanguageLine::create([
+            'group' => 'validation',
+            'key' => 'readonly',
+            'text' => [
+                'en' => 'This is a readonly',
+                'nl' => 'Dit is readonly NL',
+                'fr' => 'This is a readonly FR',
+                'de' => 'This is a readonly DE'
+            ],
+        ]);
+
+
+
+        return 'Translation is Created!';
     }
 
 
